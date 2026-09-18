@@ -53,7 +53,7 @@
             <h3>📍 DATOS COMPLETOS</h3>
             <ul>
                 <li><strong>CUE:</strong>380029100</li>
-                <li><strong>📍 Coordenadas:</strong>-21.87661, -66.18854</li>
+                <li><strong>📍 Coordenadas:</strong>-21.876522, -66.188964</li>
                 <li><strong>📞 Teléfono:</strong>0-0</li>
                 <li><strong>✉️ Email:</strong>-<a href="mailto:grireyes25@gmail.com ">grireyes25@gmail.com</a></li>
                 <li><strong>📍 Dirección:</strong>. ,. </li>
@@ -76,7 +76,7 @@
             </div>
            
             <h2>🎛️ Controles</h2>
-            <button onclick="map.setView([-21.87661,-66.18854], 17)">📍 Centrar Colegio</button>
+            <button onclick="map.setView([-21.876522, -66.188964], 17)">📍 Centrar Colegio</button>
             <button onclick="map.locate({setView: true, maxZoom: 17})">📱 Mi Ubicación</button>
              
 
@@ -106,7 +106,7 @@
             'terrain': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {maxZoom: 18})
         };
        
-        map = L.map('map', {layers: [baseMaps.osm], center: [-21.87661,-66.18854], zoom: 17});  
+        map = L.map('map', {layers: [baseMaps.osm], center: [-21.876522, -66.188964], zoom: 17});  
         currentBaseLayer = baseMaps.osm;
        
         // Marcador escuela ✅
@@ -116,7 +116,7 @@
                 <p><strong>CUE:</strong>380029100| <strong>📞:</strong>0, 0 </p>
                 <p><strong>📍:</strong> EL ANGOSTO</p>
                 <p><strong>✉️:</strong> grireyes25@gmail.com<a href="mailto:grireyes25@gmail.com "> </a></p>
-                <button onclick="window.open('https://google.com/maps?q=-21.87661 , -66.18854')" 
+                <button onclick="window.open('https://google.com/maps?q=-21.876522, -66.188964')" 
                         style="background:#AD2203;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;width:100%;margin-top:10px;">
                     🚗 Ver en Google Maps
                 </button>
@@ -124,7 +124,7 @@
         `);
 
         // Círculo 500m ✅
-        L.circle([-21.87661,-66.18854], {
+        L.circle([-21.876522, -66.188964], {
             color: '#3498db', fillColor: '#F52749', fillOpacity: 0.3, radius: 500
         }).addTo(map);
 
@@ -145,7 +145,7 @@
             L.marker(e.latlng).addTo(map).bindPopup(
                 `✅ ¡Estás aquí!<br>
                 📍 ${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}<br>
-                📏 ${Math.round(map.distance(e.latlng, [-21.87661,-66.18854]))} m del colegio`
+                📏 ${Math.round(map.distance(e.latlng, [-21.876522, -66.188964]))} m del colegio`
             ).openPopup();
         });
         map.on('locationerror', () => alert('❌ GPS bloqueado. Activa ubicación.'));
